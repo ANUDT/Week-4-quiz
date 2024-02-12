@@ -8,14 +8,14 @@ body{
     margin: 100px auto 0;
     background-color: #fff;
     padding: 30px
-    border-radius: 10px;
+    border-radius 10px;
     border: 2px solid color #eb68d7ee;
     box-shadow: 15px 10px 5px color #8d177bee;
 }
 
 .grid h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    font-size 50px;
+    font-size 30px;
     background-color: #8ad774ee;
     text-align: center;
     color: #fff;
@@ -25,11 +25,18 @@ body{
 }
 
 .quiz {
-    padding: 20px 0px;
+    padding: 30px 0px;
 }
 
 .quiz h2{
-   font size: 20px
-   
-}
+   font-size: 20px
+   color #eee
+   font-weight: 25px
+  }
 
+  .btn {
+    margin-top: 40px;
+    background: #eee;
+    font-weight: 450;
+    color: aqua;
+    width: 100%;
