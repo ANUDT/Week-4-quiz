@@ -44,7 +44,13 @@ body{
     text-align: left;
     border-radius: 5px;
     padding: 15px 0px;
-    margin: 20px 5px;
-    border:1px #37e680;
+    margin: 10px 0px;
+    border:1px solid #37e680;
     cursor: pointer;
+    transition: all 0.5s;
   }
+
+  .btn:hover{
+   background-color: #d7f083;
+   color: darkgoldenrod;
+}
