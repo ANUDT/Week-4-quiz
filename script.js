@@ -68,3 +68,5 @@ answers: [
         
     }
 
+    startQuiz();
+
