@@ -37,9 +37,7 @@ answers: [
 { text "Bunkies", correct: false},
 { text "Chippies", correct: true},
     ]
-}  
-  
-    ];
+} ];
 
     const questionElement = document.getElementById("question");
     const answerButton = document.getElementById("answer-buttons");
