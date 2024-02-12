@@ -54,6 +54,7 @@ answers: [
     }
 
     function showQuestion(){
+        resetState();
         let currentQuestion = questions [currentQuestionList];
         let questionNo = currentQuestionList + 1;
         questionElement.innerHTML = questionNo + "." + currentQuestion.
