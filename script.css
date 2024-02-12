@@ -1,8 +1,9 @@
 body{
     background-color: #ed62aeee;
+    background-size: cover;
  }
 
-.grid {
+.container {
     width: 60%;
     height: 500px;
     margin: 100px auto 0;
@@ -13,7 +14,7 @@ body{
     box-shadow: 15px 10px 5px color #8d177bee;
 }
 
-.grid h1 {
+.container h1 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
     font-size 30px;
     background-color: #8ad774ee;
@@ -66,6 +67,4 @@ body{
     border-radius: 5px;
     cursor: pointer;
     display: none;
-
-
    }
