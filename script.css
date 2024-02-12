@@ -56,15 +56,16 @@ body{
    }
 
    #next-btn{
-    background-color: #37e680;
-    color:aquamarine;
+    background-color: #e4bb4a;
+    color:rgb(67, 36, 179);
     font-weight: 500;
     width: 200px;
     border: 0;
-    padding: 20px;
+    padding: 25px 0px;
     margin: 25px auto 0;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
 
 
    }
