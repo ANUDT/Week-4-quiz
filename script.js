@@ -39,9 +39,9 @@ const questions = [
         ]
     }];
 
+const startButtonElement = document.getElementById("start-button");
 const questionElement = document.getElementById("question");
-const answerButton = document.querySelectorAll(".btn");
-const nextButton = document.getElementById("next-btn");
+const answersElement = document.getElementById("answers-button");
 
 let currentQuestionList = 0;
 let score = 0;
