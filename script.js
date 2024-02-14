@@ -20,7 +20,7 @@ const questions = [
     },
 
     {
-        questions: "What is a capital of the Netherlands?",
+        questions: "What is a capital of The Netherlands?",
         answers: [
             { text: "Groningen", correct: false },
             { text: "Amstelveen", correct: false },
@@ -45,6 +45,8 @@ const answersElement = document.getElementById("answers-button");
 
 let currentQuestionList = 0;
 let score = 0;
+let timeLeft = 60;
+let timer;
 
 function startQuiz() {
     currentQuestionList = 0;
