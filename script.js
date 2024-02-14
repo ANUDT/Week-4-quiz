@@ -49,11 +49,11 @@ let timeLeft = 60;
 let timer;
 
 function startQuiz() {
+
     console.log("start quiz");
     currentQuestionList = 0;
     score = 0;
     showQuestion();
-}
 
     timer = setInterval(function() {
     timeLeft--;
@@ -63,21 +63,63 @@ function startQuiz() {
         clearInterval(timer);
         showResult();
     }
-}, 1000);
-
-function showQuestion() {
-    let currentQuestion = questions[currentQuestionList];
-    let questionNo = currentQuestionList + 1;
-    questionElement.innerText = questionNo + "." + currentQuestion.
-        questions;
-
-        for(let i=0;i<4;i++){
-
-            answerButton[i].innerText = currentQuestion.answers[i].text;
-            answerButton[i].setAttribute("data-correct",currentQuestion.answers[i].correct)
-        }
-    
+    }, 1000);
 }
 
-startQuiz();
+//function showResult() {
+  
+    // hide the questions
+
+    // show the result
+
+    // show the save score options  
+//}
+
+
+function showQuestion() {
+    if (currentQuestionList > questions.length){
+        clearInterval(timer);
+        showResult();
+        return;
+    }
+
+    let currentQuestion = questions[currentQuestionList];
+    currentQuestionList++;
+
+    questionElement.innerText = currentQuestionList + "): " + currentQuestion.questions;
+
+    answersElement.innerHTML = "";
+
+    for(let i=0; i<currentQuestion.answers.length; i++){
+
+        const newAnswerButton = document.createElement("button");
+        newAnswerButton.textContent = currentQuestion.answers[i].text;
+        //newAnswerButton.classList.add("btn");
+
+        newAnswerButton.onclick = onAnswerClick;
+        answersElement.appendChild(newAnswerButton);
+    }
+}
+
+function onAnswerClick(event) 
+{
+    const selectedAnswer = event.target.textContent;
+    const currentQuestion = questions[currentQuestionList - 1];
+
+    // loop through the answers and find the correct one
+    for(let i=0; i< currentQuestion.answers.length; i++  ){
+        if(currentQuestion.answers[i].text === selectedAnswer){
+            if(currentQuestion.answers[i].correct === true){
+                alert("Correct!");
+                score++;
+            } else {
+                alert("Wrong!");
+                timeLeft -= 5;
+            }
+        }
+    }
+    showQuestion();
+}
+
+startButtonElement.addEventListener("click", startQuiz);
 
