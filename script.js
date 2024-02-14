@@ -1,73 +1,76 @@
 const questions = [
-{
-questions: "How long is the longest wedding veil in the world?",
-answers: [ 
-{ text: "23.000 Feet, same lenght as 63.5 football fields", correct: true},
-{ text: "Same height as the Effel Tower", correct: false},
-{ text: "Same lenght as Big Ben", correct: false},
-{ text: "5.73 meters long", correct: false},
-    ]
-},
+    {
+        questions: "How long is the longest wedding veil in the world?",
+        answers: [
+            { text: "23.000 Feet, same lenght as 63.5 football fields", correct: true },
+            { text: "Same height as the Effel Tower", correct: false },
+            { text: "Same lenght as Big Ben", correct: false },
+            { text: "5.73 meters long", correct: false },
+        ]
+    },
 
-{
-questions: "What are the biggest diamond on Earth and Crown Jewel?",
-answers: [ 
-{ text: "29 carat Sirkionia", correct: false},
-{ text: "The pink Panther", correct: false},
-{ text:"Great Star of Africa, 3,106 carat from South Africa in 1905", correct: true},
-{ text: "Kohinoor", correct: false},
-    ]
-},
+    {
+        questions: "What are the biggest diamond on Earth and Crown Jewel?",
+        answers: [
+            { text: "29 carat Sirkionia", correct: false },
+            { text: "The pink Panther", correct: false },
+            { text: "Great Star of Africa, 3,106 carat from South Africa in 1905", correct: true },
+            { text: "Kohinoor", correct: false },
+        ]
+    },
 
-{
-questions: "What is a group of bunnies called?",
-answers: [ 
-{ text:"29 carat Sirkionia", correct: false},
-{ text:"The pink Panther", correct: false},
-{ text:"SGreat Star of Africa, 3,106 carat from South Africa in 1905", correct: true},
-{ text: "Kohinoor", correct: false},
-    ]
-},
+    {
+        questions: "What is a group of bunnies called?",
+        answers: [
+            { text: "29 carat Sirkionia", correct: false },
+            { text: "The pink Panther", correct: false },
+            { text: "SGreat Star of Africa, 3,106 carat from South Africa in 1905", correct: true },
+            { text: "Kohinoor", correct: false },
+        ]
+    },
 
-{
-questions: "What can you hear from a    blue whale from more then 2 miles away?",
-answers: [ 
-{ text:"Giggles troops", correct: false},
-{ text:"Fluffle", correct: true},
-{ text:"Bunkies", correct: false},
-{ text:"Chippies", correct: true},
-    ]
-} ];
+    {
+        questions: "What can you hear from a    blue whale from more then 2 miles away?",
+        answers: [
+            { text: "Giggles troops", correct: false },
+            { text: "Fluffle", correct: true },
+            { text: "Bunkies", correct: false },
+            { text: "Chippies", correct: true },
+        ]
+    }];
 
-    const questionElement = document.getElementById("question");
-    const answerButton = document.getElementById("answer-buttons");
-    const nextButton = document.getElementById("next-buttons");
+const questionElement = document.getElementById("question");
+const answerButton = document.querySelectorAll(".btn");
+const nextButton = document.getElementById("next-btn");
 
-    let currentQuestionList = 0;
-    let score = 0;
+let currentQuestionList = 0;
+let score = 0;
 
-    function startQuiz(){
-        currentQuestionList = 0;
-        score = 0;
-        nextButton.innerHTML ="Next";
-        showQuestion();
-    }
+function startQuiz() {
+    currentQuestionList = 0;
+    score = 0;
+    showQuestion();
+}
 
-    function showQuestion(){
-        resetState();
-        let currentQuestion = questions [currentQuestionList];
-        let questionNo = currentQuestionList + 1;
-        questionElement.innerHTML = questionNo + "." + currentQuestion.
-        question; 
+function showQuestion() {
+    let currentQuestion = questions[currentQuestionList];
+    let questionNo = currentQuestionList + 1;
+    questionElement.innerText = questionNo + "." + currentQuestion.
+        questions;
 
-        currentQuestion.answers.forEach(answers => {
-            const button = document.createElement("button");
-            button.innerHTML = answer.text;
-            button.classList.add("btn");
-            answerButton.appendChild(button);
-        });
-        
-    }
+        for(let i=0;i<4;i++){
 
-    startQuiz();
+            answerButton[i].innerText = currentQuestion.answers[i].text;
+            answerButton[i].setAttribute("data-correct",currentQuestion.answers[i].correct)
+        }
+
+    // currentQuestion.answers.forEach(answers => {
+    //     const button = document.createElement("button");
+    //     button.innerHTML = answer.text;
+    //     button.classList.add("btn");
+    // });
+
+}
+
+startQuiz();
 
