@@ -49,10 +49,21 @@ let timeLeft = 60;
 let timer;
 
 function startQuiz() {
+    console.log("start quiz");
     currentQuestionList = 0;
     score = 0;
     showQuestion();
 }
+
+    timer = setInterval(function() {
+    timeLeft--;
+    document.querySelector(".time-left").innerText = timeLeft;
+
+    if(timeLeft <= 0) {
+        clearInterval(timer);
+        showResult();
+    }
+}, 1000);
 
 function showQuestion() {
     let currentQuestion = questions[currentQuestionList];
