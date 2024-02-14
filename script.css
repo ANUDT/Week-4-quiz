@@ -30,9 +30,9 @@ body{
 }
 
 .quiz h2{
-       font-size: 20px
-   color #eee
-   font-weight 25px;
+    font-size: 20px
+    color #eee
+    font-weight 25px;
   }
 
   .btn {
@@ -104,4 +104,12 @@ box-shadow: 0 20px 30px;
     width: 100%;
     margin: 0 auto;
     border-radius: 1em;
-}
+   }
+
+   .timer-div{
+    background-color: #b7addb;
+    width: 100%
+    display flex;
+    align-items: center;
+    justify-content: space-between;
+   }
