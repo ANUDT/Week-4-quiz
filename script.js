@@ -63,13 +63,6 @@ function showQuestion() {
             answerButton[i].innerText = currentQuestion.answers[i].text;
             answerButton[i].setAttribute("data-correct",currentQuestion.answers[i].correct)
         }
-
-    // currentQuestion.answers.forEach(answers => {
-    //     const button = document.createElement("button");
-    //     button.innerHTML = answer.text;
-    //     button.classList.add("btn");
-    // });
-
 }
 
 startQuiz();
