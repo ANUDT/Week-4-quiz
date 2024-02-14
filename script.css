@@ -76,14 +76,32 @@ width: 100%;
 height: 100%;
 display: flex;
 flex-direction: column;
-align-items: center;
-justify-content: center;
+align-items:center
+justify-content center;
 }
 
-#start-button, #restart{
-font-size: 2em;
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#start-button, #restart {
+background-color: #e4bb4a;
+font-size: 1em;
 padding: 1em 2em;
 border-radius: 0.3em;
 box-shadow: 0 20px 30px;
+}
 
+#restart {
+    margin-top: 1em;
+    }
+
+#display-container {
+    background-color: #37e680;
+    padding: 2.5em and 1.5em;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1em;
 }
