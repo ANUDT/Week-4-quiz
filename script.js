@@ -63,8 +63,7 @@ function showQuestion() {
             answerButton[i].innerText = currentQuestion.answers[i].text;
             answerButton[i].setAttribute("data-correct",currentQuestion.answers[i].correct)
         }
-
-        
+    
 }
 
 startQuiz();
