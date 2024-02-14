@@ -20,17 +20,17 @@ const questions = [
     },
 
     {
-        questions: "What is a group of bunnies called?",
+        questions: "What is a capital of the Netherlands?",
         answers: [
-            { text: "29 carat Sirkionia", correct: false },
-            { text: "The pink Panther", correct: false },
-            { text: "SGreat Star of Africa, 3,106 carat from South Africa in 1905", correct: true },
-            { text: "Kohinoor", correct: false },
+            { text: "Groningen", correct: false },
+            { text: "Amstelveen", correct: false },
+            { text: "Amsterdam", correct: true },
+            { text: "Den Haag", correct: false },
         ]
     },
 
     {
-        questions: "What can you hear from a    blue whale from more then 2 miles away?",
+        questions: "What is a group of bunnies called??",
         answers: [
             { text: "Giggles troops", correct: false },
             { text: "Fluffle", correct: true },
