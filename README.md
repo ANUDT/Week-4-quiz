@@ -14,3 +14,6 @@ Mock-Up
 
 URL links:# Week-4-quiz
 https://github.com/ANUDT/Week-4-quiz
+
+![image](https://github.com/ANUDT/Week-4-quiz/assets/152813453/5f3125d2-b4c4-4477-b825-c4e5feee653f)
+
