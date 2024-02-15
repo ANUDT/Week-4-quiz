@@ -41,7 +41,7 @@ const questions = [
 
 const startButtonElement = document.getElementById("start-button");
 const questionElement = document.getElementById("question");
-const answersElement = document.getElementById("answers-button");
+const answersElement = document.getElementById("answer-buttons");
 
 let currentQuestionList = 0;
 let score = 0;
@@ -49,7 +49,7 @@ let timeLeft = 60;
 let timer;
 
 function startQuiz() {
-
+startButtonElement.classList.add("hide");
     console.log("start quiz");
     currentQuestionList = 0;
     score = 0;
@@ -65,19 +65,22 @@ function startQuiz() {
     }
     }, 1000);
 }
+function showResult() {
+  var higscoreContainer = document.querySelector(".highscore-container");
+  higscoreContainer.classList.remove("hide");
 
-//function showResult() {
-  
-    // hide the questions
-
+var questionArea = document.getElementById("question");
+var answerButtonArea = document.getElementById("answer-buttons");
+questionArea.classList.add("hide");
+answerButtonArea.classList.add ("hide");
     // show the result
 
     // show the save score options  
-//}
+}
 
 
 function showQuestion() {
-    if (currentQuestionList > questions.length){
+    if (currentQuestionList >= questions.length){
         clearInterval(timer);
         showResult();
         return;
@@ -94,7 +97,7 @@ function showQuestion() {
 
         const newAnswerButton = document.createElement("button");
         newAnswerButton.textContent = currentQuestion.answers[i].text;
-        //newAnswerButton.classList.add("btn");
+        newAnswerButton.classList.add("btn");
 
         newAnswerButton.onclick = onAnswerClick;
         answersElement.appendChild(newAnswerButton);

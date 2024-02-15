@@ -8,6 +8,7 @@ body{
     height: 500px;
     margin: 100px auto 0;
     background-color: #fff;
+    margin-top: 20%;
     padding: 30px
     border-radius 10px;
     border: 2px solid color #eb68d7ee;
@@ -51,6 +52,9 @@ body{
     transition: all 0.5s;
   }
 
+  .highscore-container {
+    
+  }
   .btn:hover{
    background-color: #d7f083;
    color: darkgoldenrod;
@@ -78,6 +82,10 @@ body{
     flex-direction: column;
     align-items:end
     justify-content end;
+}
+
+.hide {
+display: none;
 }
 
 button {
