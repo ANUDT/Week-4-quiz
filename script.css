@@ -8,7 +8,7 @@ body{
     height: 500px;
     margin: 100px auto 0;
     background-color: #fff;
-    margin-top: 20%;
+    margin-top: 10%;
     padding: 30px
     border-radius 10px;
     border: 2px solid color #eb68d7ee;
@@ -53,8 +53,21 @@ body{
   }
 
   .highscore-container {
-    
+    margin-top: 40px;
+    background: #eee;
+    font-weight: 450;
+    width: 100%;
+    color: rgb(1, 14, 14);
+    font-weight: bold 300;
+    text-align: left;
+    border-radius: 5px;
+    padding: 15px 0px;
+    margin: 10px 0px;
+    border:1px solid #37e680;
+    cursor: pointer;
+    transition: all 0.5s;
   }
+
   .btn:hover{
    background-color: #d7f083;
    color: darkgoldenrod;
